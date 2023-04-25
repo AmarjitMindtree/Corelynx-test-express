@@ -1,0 +1,26 @@
+Steps to run
+-----------------
+1. Do npm install by running below command
+    npm install
+
+2. Run the start command
+    npm run start
+
+----------------
+
+CURL request to hit
+
+LOGIN CURL
+curl --location --request POST 'http://localhost:3000/login' \
+--header 'Content-Type: application/json' \
+--data-raw '{
+    "login_email": "kumaramarjit04@gmail.com",
+    "login_password": "User@1234",
+    "document_prefix": "something"
+}'
+
+
+UPLOAD CURL
+curl --location --request POST 'http://localhost:3000/upload' \
+--header 'Authorization: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJsb2dpbl9lbWFpbCI6Imt1bWFyYW1hcmppdDA0QGdtYWlsLmNvbSIsImRvY3VtZW50X3ByZWZpeCI6InNvbWV0aGluZyIsImlhdCI6MTY4MjQwNzI1NH0.-sasabykmiw_CXpLJVoQal_gxNykV7EYZaPE8u2s_fQ' \
+--form 'file=@"/Users/amarjitnium/Desktop/data.json"'
